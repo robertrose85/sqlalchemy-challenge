@@ -124,11 +124,11 @@ def start(start_date):
     session.close()
 
     tobs = []
-    for min,avg,max in queryresult:
+    for min, max, avg in queryresult:
         dict = {}
         dict["Min"] = min
         dict["Max"] = max
-        dict["Average"] = avg
+        dict["Avg"] = avg
         tobs.append(dict)
 
     return jsonify(tobs)
@@ -144,11 +144,11 @@ def end(start_date, end_date):
     session.close()
   
     tobs = []
-    for min, avg, max in results:
+    for min, max, avg in results:
         dict = {}
         dict["Min"] = min
         dict["Max"] = max
-        dict["Average"] = avg
+        dict["Avg"] = avg
         tobs.append(dict)     
 
     return jsonify(tobs)
